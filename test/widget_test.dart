@@ -26,5 +26,10 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
+
+    // aboutへ移動ボタンで"Hellow World!"が表示されることを確認
+    await tester.tap(find.text('aboutへ移動'));
+    await tester.pumpAndSettle();
+    expect(find.text('Hello World!'), findsOneWidget);
   });
 }
