@@ -9,8 +9,20 @@ class AboutPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('About'),
       ),
-      body: const Center(
-        child: Text('Hello World!', style: TextStyle(fontSize: 32)),
+      body: _buildConatiner(),
+    );
+  }
+
+  // Widgetを自由に書いてみようの会
+  // https://docs.flutter.dev/ui/widgets
+  Widget _buildConatiner() {
+    return Container(
+      color: Colors.blue,
+      // width: 100,
+      // height: 100,
+      child: const Center(
+        child: Text('Hello World!',
+            style: TextStyle(fontSize: 32, color: Colors.white)),
       ),
     );
   }
